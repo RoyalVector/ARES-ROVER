@@ -1,2 +1,2 @@
 # ARES-ROVER
-Semi Autonomous, Wi-Fi controlled smart rover designed to learn about robotics, embedded systems, telemetry systems, and autonomous behavior with an ESP32 microcontroller.
+A WiFi-controlled 4WD smart rover with semi-autonomous safety faetures, obstacle-aware braking, battery monitoring, telemetry dashboard, and custom chassis design.
