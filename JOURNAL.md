@@ -9,7 +9,9 @@ _Time spent: 4h_
 
 # Overview
 Finally, after working on this project on and off for weeks, im finally at the final stage. In this session I designed the chassis for the rover. I knew i couldnt just design it i a generic rover design because of my components so i imported 3d models of the major components and built around them so i could be certain that the final design would fit all of them perfectly.
+
 ![Screenshot 2026-06-10 202117](https://stasis.hackclub-assets.com/images/1781252280209-s8wkgk.png)
+
 The image above displays the final design of the rover after multuple changes and adjustments.
 The components are cleary visible so the design is pretty straight forward.
 I placed the accelerometer near the centre of the rover to make sure to get accurate readings since according to physics, the total weight acts at the centre of gravity which would be around the centre for this rover.
@@ -17,19 +19,25 @@ I placed the accelerometer near the centre of the rover to make sure to get accu
 The ultrasonic sensor has a sort of surface behind it that would allow for easy mounting.
 The batteries are near the centre for better weight distribution.
 On the bottom chassis plate, thats where the motors are placed, as well as the ESP32 and motor driver. Most wire connections will be here, keeping the rover looking organised. There are multiple holes on the top and bottom chassis plates to allow for the wires to run to the esp32 for control.
+
 ![Screenshot 2026-06-10 202201](https://stasis.hackclub-assets.com/images/1781252841248-pznon9.png)
+
 The shows what the plates look like without components.
 The rectagular looking support is where the esp32 is placed. It allows for easier pin access and soldering.
 The other protrusions are the screw holders.
 Ill be using 35mm m3 screws to hold the top and bottom plates together 
 There are also a set of 4 holes near each corner of the bottom plate. They are for mounting the rover motors to the frame through the motor brackets that come with the rover.
 All measurements and holes where made using the actual measurements of the components im getting for the project, not the 3d models, so even if the model doesnt seem to fit in properly (which they all do), it is not a problem and they were only meant for representation anyways.
+
 ![Screenshot 2026-06-12 094204](https://stasis.hackclub-assets.com/images/1781254293928-b1lqhl.png)
+
 All the screws and mounting equipment have already been considered. The motors already come with their own screws as well so thats pretty much it.
 
 ![image](https://stasis.hackclub-assets.com/images/1781252280209-s8wkgk.png)
 ![image](https://stasis.hackclub-assets.com/images/1781252841248-pznon9.png)
 ![image](https://stasis.hackclub-assets.com/images/1781254293928-b1lqhl.png)
+
+
 
 # 6/6/2026 5 PM - Return Home Navigation and Communication Architecture
 
@@ -63,7 +71,9 @@ All these metrics are measured exactly with wheel encoders that are already embe
 ## Path Reconstruction Architecture
 This is the system that will handle the logic for creating the return home path with the available data.
 It works something like this
+
 ![Screenshot 2026-06-06 185052](https://stasis.hackclub-assets.com/images/1780768283723-0t1ctn.png)
+
 This is the basis of the rovers recovery system
 
 ## Encoder Integration Planning
@@ -125,6 +135,8 @@ All thats left is to design the chassis
 
 ![image](https://stasis.hackclub-assets.com/images/1780768283723-0t1ctn.png)
 
+
+
 # 6/6/2026 12 PM - Autonomous Navigation and Mission Management
 
 _Time spent: 5h_
@@ -143,7 +155,9 @@ This is the rovers primary autonomous operating mode. It allows the rover to per
 
 ## Obstacle Recovery Logic
 Since the rover could detect objects, its obvious it would need control logic for when it does and how to handle it. Basically the logic structure looks like
+
 ![Screenshot 2026-06-06 122241](https://stasis.hackclub-assets.com/images/1780744974967-0lif89.png)
+
 This will allow the rover to continue exploration even when obstacles are encountered
 
 ## Path Selection
@@ -174,7 +188,9 @@ Like the timing framework but for distance. Currently supports;
 
 ## Autonomous Decision Making Flow
 The basic structue for how the rover will navigate 
+
 ![Screenshot 2026-06-06 125406](https://stasis.hackclub-assets.com/images/1780746873408-cqt4ts.png)
+
 This structure allows the system to be very predictable and scalable as well with more features eventually (if needed)
 
 ## Recovery Attempt Management
@@ -194,6 +210,8 @@ The next session will focus on developing the return home functionality, movemen
 
 ![image](https://stasis.hackclub-assets.com/images/1780744974967-0lif89.png)
 ![image](https://stasis.hackclub-assets.com/images/1780746873408-cqt4ts.png)
+
+
 
 # 6/5/2026 8 PM - Sensor Integration and Environmental Awareness System
 
@@ -255,6 +273,7 @@ These values will eventually be transmitted to the controller for monitoring
 
 ## Environmental Awareness Architecture
 With so many parameters, I had to design a hierarchical framework to handle the decison making flow
+
 ![Screenshot 2026-06-06 094339](https://stasis.hackclub-assets.com/images/1780735586817-4g8zpw.png)
 
 This framework is the basis of most of the autonomous operation.
@@ -262,6 +281,8 @@ This framework is the basis of most of the autonomous operation.
 Next ill focus more on the autonomous navigation behaviour, including obstacle avoidance, exploration logic, mission tracking and movement analytics.
 
 ![image](https://stasis.hackclub-assets.com/images/1780735586817-4g8zpw.png)
+
+
 
 # 6/5/2026 6 PM - Firmware Architecture Foundation
 
@@ -274,7 +295,9 @@ Heres the breakdown of what I did
 
 ## Firmware Structure Design
 I designed a hierarchical firmware structure to separate the high level rover behaviour from the low level hardware control
+
 ![Screenshot 2026-06-05 191833](https://stasis.hackclub-assets.com/images/1780683813526-u3u824.png)
+
 This structure will make it easier to maintain and improve upon later
 
 ## Operational Mode Design
@@ -371,6 +394,8 @@ These would provide data for the autonomous navigation and telemetry generation.
 
 ![image](https://stasis.hackclub-assets.com/images/1780683813526-u3u824.png)
 
+
+
 # 6/3/2026 10 AM - Project Simulation(Testing)
 
 _Time spent: 5h_
@@ -382,7 +407,9 @@ Since this project is a bit more technical then the previous ones, I couldnt ful
 For starters, I started by adding the componnets into the environment, then I had to figure out the GPIO pin mapping to avoid confusion when developing the firmware later.
 After I wired everything up, I decided to test it to see whether everything is connected well. And since I also use wokwi to get my wiring diagrams, I was basically killing to birds with one stone.
 Heres an image
+
 ![Screenshot 2026-06-03 113956](https://stasis.hackclub-assets.com/images/1780483217402-8goug1.png)
+
 As you would observe, I used LED lights with resistors to represent the wheels of the rover. Other the components stay pretty much the same.
 I then started with the unit testing of individual components to make sure that they are all good to go before moving on. Doing the tests individually made my life a whole lot easier since problems were easier to identify than just trying to make everything work from the beginning then encoutering multiple intertwined problems.
 The tests were pretty straigtforward. I tested whether the ultrasonic sensor turns on and reacts to changes in object distance, the MPU whether it reacts to changes in direction, tilt and speed, teh buzzer whether it actually beeps when intended. They all worked first try EXCEPT... theres always an except... the LEDS, they refused to turn on. I tried checking whether the code had the issue, it didnt, I even started thinking I couldnt share connections on the GND pin on the ESP, but obviously you can. Thats when i noticed it, the single dumbest mistake ive made on this project, I had connected the LEDS wrongly, tehir polarities were switched. 
@@ -408,11 +435,15 @@ Other leds and buzzer are not relevant here
 Triggered when an object is detected within 30cm of the rover
 It makes all the LEDS blink as a sort of warning, sounds the buzzer and prints a warning in the serial monitor
 ### Forward
+
 ![Screenshot 2026-06-03 123332](https://stasis.hackclub-assets.com/images/1780486464822-r2iiz6.png)
+
 ![Screenshot 2026-06-03 123346](https://stasis.hackclub-assets.com/images/1780486508207-1o1ufq.png)
 
 ### Obstacle Detected
+
 ![Screenshot 2026-06-03 123242](https://stasis.hackclub-assets.com/images/1780486521266-ar70yb.png)
+
 ![Screenshot 2026-06-03 123310](https://stasis.hackclub-assets.com/images/1780486529805-zngftv.png)
 
 Everything seems to be working fine so... I guess thats it.
@@ -423,6 +454,7 @@ In the short while after finishing this journal, the system of this rover has ch
 Firstly, The web based interface seems too software heavy for this purpose, so decided to replace it with a custom controller which i will start working on soon.
 Second, the current states of the rover are just vaguely defined here, ill do the full planning and break down in the next journal
 Third, I added a potentiometer to represent the battery system for the rover and help make sure states function properly.
+
 ![Screenshot 2026-06-05 142831](https://stasis.hackclub-assets.com/images/1780666130093-94a9sf.png)
 
 A bunch more things as well. Everything is broken down in the next few journals.
@@ -434,6 +466,8 @@ A bunch more things as well. Everything is broken down in the next few journals.
 ![image](https://stasis.hackclub-assets.com/images/1780486529805-zngftv.png)
 ![image](https://stasis.hackclub-assets.com/images/1780666130093-94a9sf.png)
 
+
+
 # 5/16/2026 2 PM - Wiring System Design
 
 _Time spent: 4h_
@@ -442,12 +476,15 @@ _Time spent: 4h_
 After I was done with the basic planning of the system, I started planning the wiring structure of the sub systems and the rover as a whole
 
 First, I started with the power system which is a very important part of the whole system. The wiring structure would look something like this
+
 ![Screenshot 2026-05-16 145838](https://stasis.hackclub-assets.com/images/1778939975046-f0syoq.png)
+
 This structure would be better to manage since any error can be traced back individually instead for the whole system.
 The buck converter is useful for the system because it would regulate the voltage from the batteries ( which may or may not fluctuate sometimes) and provides the ESP32 and the sensors a steady 5v, thereby protecting the components from any flucuation
 
 Next is the Movement system. The earlier image already shows how it is intended to be connected to the rest of the system. Since the rover uses skid steering, the movement motors are divided into the left and right sides. Each side has two wheels which move together but independently of the other side.
 The front and rear motor on each side are wired together and connected to the motor driver as two channels instead of four. This would make it more effiecient than having four channels and then needing steering servos. The rover would turn by varying the speeds of each individual side, straight movement would be equal speed on both sides, turning left or right would be varying the speeds, and a full turn (left, right or 360 degrees) would be to reverse the direction of one side.
+
 ![Screenshot 2026-05-16 154051](https://stasis.hackclub-assets.com/images/1778942474825-epyb5z.png)
 
 The ESP32 is going to handle quite alot more in this project than in my previous projects.
@@ -465,9 +502,12 @@ After i realized all that its going to handle, i decided theres no need to add m
 Next was the sensor architecture. The sensors are connected directly to the microcontroller. The main sensors for this project are;
 ### Ultrasonic Sensor
 For object distance detection which would enable features like assisted braking, collision warnings, and other future improvements.
+
 ![Screenshot 2026-05-28 133222](https://stasis.hackclub-assets.com/images/1779971572259-oe7a5g.png)
+
 ### MPU6050 IMU
 For motion and orientation detection and monitoring. This allows for features like acceleration tracking, tilt and vibration monitoring as well as general movement awareness.
+
 ![Screenshot 2026-05-16 160033](https://stasis.hackclub-assets.com/images/1779971293685-rsccrw.png)
 
 Next is the communication architecture. This rover uses multiple communication channels simultaneously.
@@ -486,6 +526,8 @@ Thats generally it for this journal
 ![image](https://stasis.hackclub-assets.com/images/1778942474825-epyb5z.png)
 ![image](https://stasis.hackclub-assets.com/images/1779971572259-oe7a5g.png)
 ![image](https://stasis.hackclub-assets.com/images/1779971293685-rsccrw.png)
+
+
 
 # 5/15/2026 10 AM - Project Planning And System Architecture + BOM
 
@@ -530,14 +572,19 @@ The power system as had learned, required a bit more technical planning because 
 The rover uses two lithium batteries connected in series through a 2S BMS board (protection board).
 This is to allow for a higher voltage for the motors which efectively makes them perform more consistently and reduces the risk of voltage drops for the ESP32.
 A LM2596 buck converter was also used to manage the ESP32's electrical current ny providing a steady and stable voltage for it.
+
 ![Screenshot 2026-05-15 212833](https://stasis.hackclub-assets.com/images/1778877283615-us2lx0.png)
+
 ![Screenshot 2026-05-15 213401](https://stasis.hackclub-assets.com/images/1778877279968-ui1krn.png)
+
 ![Screenshot 2026-05-15 212710](https://stasis.hackclub-assets.com/images/1778877286300-r5ctbz.png)
 
 For the movement system, the rover uses 4 TT  gear motors and wheels in an orientation that will enable skid steering. Instead of using servos for steering, the rover will turn by varying the speed of the wheels on either side.
 This simplifies the steering complexity and the need for additional parts while giving the project a more rover like movement pattern (Although thats not the main point, just aesthetics).
 A TB6612FNG motor driver was used here because it is smaller and more efficient for the battery powered system
+
 ![Screenshot 2026-05-15 215111](https://stasis.hackclub-assets.com/images/1778878308552-a8ioho.png)
+
 ![Screenshot 2026-05-15 214952](https://stasis.hackclub-assets.com/images/1778878308516-ustay4.png)
 
 For the interface dashboard, I initially wanted to add an OLED screen to the rover, but after rethinking it, I figured i shouldnt since ive used it alot in previous projects so i want to try something different. I decided ill make the dashboard and information system fully web based, hosted by the esp32.
