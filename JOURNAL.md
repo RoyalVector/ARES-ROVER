@@ -33,10 +33,6 @@ All measurements and holes where made using the actual measurements of the compo
 
 All the screws and mounting equipment have already been considered. The motors already come with their own screws as well so thats pretty much it.
 
-![image](https://stasis.hackclub-assets.com/images/1781252280209-s8wkgk.png)
-![image](https://stasis.hackclub-assets.com/images/1781252841248-pznon9.png)
-![image](https://stasis.hackclub-assets.com/images/1781254293928-b1lqhl.png)
-
 
 
 # 6/6/2026 5 PM - Return Home Navigation and Communication Architecture
@@ -133,8 +129,6 @@ I also improved the startup diagnostics sequence to include the validation of cr
 And with that the basic framework for the rover system is done
 All thats left is to design the chassis
 
-![image](https://stasis.hackclub-assets.com/images/1780768283723-0t1ctn.png)
-
 
 
 # 6/6/2026 12 PM - Autonomous Navigation and Mission Management
@@ -208,9 +202,6 @@ At this point the rover firmware architecture should be  able to handle in addit
 
 The next session will focus on developing the return home functionality, movement history management, communication architecture and future controller integration.
 
-![image](https://stasis.hackclub-assets.com/images/1780744974967-0lif89.png)
-![image](https://stasis.hackclub-assets.com/images/1780746873408-cqt4ts.png)
-
 
 
 # 6/5/2026 8 PM - Sensor Integration and Environmental Awareness System
@@ -279,8 +270,6 @@ With so many parameters, I had to design a hierarchical framework to handle the 
 This framework is the basis of most of the autonomous operation.
 
 Next ill focus more on the autonomous navigation behaviour, including obstacle avoidance, exploration logic, mission tracking and movement analytics.
-
-![image](https://stasis.hackclub-assets.com/images/1780735586817-4g8zpw.png)
 
 
 
@@ -392,8 +381,6 @@ So with this the rover should now have a capable software framework that can sup
 In the next phase, I will on the sensor integration and environmental awareness systems, including battery monitoring, obstacle detection, and inertial sensing.
 These would provide data for the autonomous navigation and telemetry generation.
 
-![image](https://stasis.hackclub-assets.com/images/1780683813526-u3u824.png)
-
 
 
 # 6/3/2026 10 AM - Project Simulation(Testing)
@@ -459,13 +446,6 @@ Third, I added a potentiometer to represent the battery system for the rover and
 
 A bunch more things as well. Everything is broken down in the next few journals.
 
-![image](https://stasis.hackclub-assets.com/images/1780483217402-8goug1.png)
-![image](https://stasis.hackclub-assets.com/images/1780486464822-r2iiz6.png)
-![image](https://stasis.hackclub-assets.com/images/1780486508207-1o1ufq.png)
-![image](https://stasis.hackclub-assets.com/images/1780486521266-ar70yb.png)
-![image](https://stasis.hackclub-assets.com/images/1780486529805-zngftv.png)
-![image](https://stasis.hackclub-assets.com/images/1780666130093-94a9sf.png)
-
 
 
 # 5/16/2026 2 PM - Wiring System Design
@@ -521,11 +501,6 @@ On the ESP that handles the ultrsonic sensor connections, buzzer, motor directio
 For, as I have learned, the MPU6050 communication.
 
 Thats generally it for this journal
-
-![image](https://stasis.hackclub-assets.com/images/1778939975046-f0syoq.png)
-![image](https://stasis.hackclub-assets.com/images/1778942474825-epyb5z.png)
-![image](https://stasis.hackclub-assets.com/images/1779971572259-oe7a5g.png)
-![image](https://stasis.hackclub-assets.com/images/1779971293685-rsccrw.png)
 
 
 
@@ -601,9 +576,3 @@ I think these features classify it as a good semi autonomous rover
 I plan on making a custom chassis for the project as well, which would have design considerations like motor and battery mounting, electronics protection, wiring management, and future expansions too (still being considered)
 
 I think thats all for this part. The next part of the project would be to find a way start creating the wiring architecture and fusion of the sub systems.
-
-![image](https://stasis.hackclub-assets.com/images/1778877283615-us2lx0.png)
-![image](https://stasis.hackclub-assets.com/images/1778877279968-ui1krn.png)
-![image](https://stasis.hackclub-assets.com/images/1778877286300-r5ctbz.png)
-![image](https://stasis.hackclub-assets.com/images/1778878308552-a8ioho.png)
-![image](https://stasis.hackclub-assets.com/images/1778878308516-ustay4.png)
